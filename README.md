@@ -58,3 +58,8 @@ resolve: {
 - Eseguiamo i due comandi di esecuzione costante in due terminali separati (anche paralleli, volendo) `npm run dev` e `php artisan serve`
 
   
+## Standard di denominazione 
+- Nomi cartelle in views: plurale (a meno che non siano admin o guest per definire chi ne usufruira')
+- Denominazione dei blade nelle views seguie il kebab-case io-sono-una-pagina-blade.blade.php
+- Denominazione dei model richiede SEMPRE il nome della tabella in uso al singolare, quindi da `books` il modello si chiamera' `Book` (segue PascalCase al singolare)
+- Denominazione dei controller segue PascalCase al singolare `BookController`
