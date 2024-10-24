@@ -6,20 +6,22 @@
     <section class="container">
         <div class="row">
             <div class="col-12">
-                <h1 class="fw-bold text-center">
-                    Comics list:
+                <h1 class="fw-bold text-center py-4">
+                    Comics:
                 </h1>
             </div>
             <div class="col-12">
                 <div class="row justify-content-center">
                     @forelse ( $comics as $comic )
-                        <div class="card col-3">
+                    <article class="card col-2 mb-3 me-3">
+                        <a href="{{ route("comic.show", $loop->index) }}">
                             <img src="{{ $comic["thumb"] }}" class="card-img-top" alt="{{ $comic["title"] }}">
                             <div class="card-body">
-                                <h5 class="card-title">{{ $comic["title"] }}</h5>
-                                <p class="card-text">{{ $comic["description"] }}</p>
+                                <p class="card-title fw-bold">{{ $comic["title"] }}</p>
+                                {{-- <p class="card-text">{{ $comic["description"] }}</p> --}}
                             </div>
-                        </div>
+                        </a>
+                    </article>
                     @empty
                         <div class="col-12">
                             <h2>
